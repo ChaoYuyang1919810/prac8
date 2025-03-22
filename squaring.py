@@ -3,7 +3,7 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 
 __author__ = 'Chao Yuyang'
-
+"""total time: 3 hours"""
 class SquareNumberApp(App):
     """ SquareNumberApp is a Kivy App for squaring a number """
     def build(self):
