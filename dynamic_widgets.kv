@@ -1,18 +1,37 @@
 BoxLayout:
     orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    # BoxLayout to hold dynamically created buttons
     BoxLayout:
         orientation: 'vertical'
-        # this layout is populated with Button widgets in app code
-        id: entries_box
+        id: entries_box  # Reference for adding buttons dynamically
+        spacing: 10
+        size_hint_y: 0.7  # 70% of the window height
+
+    # Label to display status text
     Label:
-        size_hint_y: 0.1
-        text: app.status_text
+        size_hint_y: 0.1  # 10% of the window height
+        text: app.status_text  # Bound to the StringProperty
+        font_size: 24
+        color: 0, 0, 1, 1  # Blue text
+        bold: True
+
+    # BoxLayout for Create and Clear buttons
     BoxLayout:
         orientation: 'horizontal'
-        size_hint_y: 0.2
+        size_hint_y: 0.2  # 20% of the window height
+        spacing: 10
+
+        # Button to create widgets
         Button:
             text: "Create Widgets"
-            on_press: app.create_widgets()
+            font_size: 24
+            on_press: app.create_widgets()  # Call create_widgets method
+
+        # Button to clear widgets
         Button:
             text: "Clear Widgets"
-            on_press: app.clear_all()
+            font_size: 24
+            on_press: app.clear_all()  # Call clear_all method
